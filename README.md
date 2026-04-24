@@ -1,17 +1,61 @@
 # Tarea-3---Funciones-Arrays-JS
 
-| **[ejer1.html](./ejer1.html)** | Filtrar números pares de un array. | `filter` |
-| **[ejer2.html](./ejer2.html)** | Obtener productos con stock mayor a cero. | `filter` |
-| **[ejer3.html](./ejer3.html)** | Eliminar elementos duplicados de un array. | `filter` e `indexOf` |
-| **[ejer4.html](./ejer4.html)** | Calcular precios con IVA (21%) y redondeo. | `map` |
-| **[ejer5.html](./ejer5.html)** | Extraer propiedades específicas usando destructuring. | `map` |
-| **[ejer6.html](./ejer6.html)** | Formatear strings a "APELLIDO, Nombre". | `map` |
-| **[ejer7.html](./ejer7.html)** | Suma total de precios. | `reduce` |
-| **[ejer8.html](./ejer8.html)** | Agrupar gastos por categoría en un objeto. | `reduce` |
-| **[ejer9.html](./ejer9.html)** | Contar ocurrencias de palabras en un array. | `reduce` |
-| **[ejer10.html](./ejer10.html)** | Buscar un usuario específico por su ID. | `find` |
-| **[ejer11.html](./ejer11.html)** | Localizar índice y actualizar valor de un producto. | `findIndex` |
-| **[ejer12.html](./ejer12.html)** | Ordenar números (ascendente) y frutas (alfabético). | `sort` |
-| **[ejer13.html](./ejer13.html)** | Ordenar empleados por salario (descendente). | `sort` |
-| **[ejer14.html](./ejer14.html)** | Mostrar ticket de compra y calcular total. | `forEach` |
-| **[ejer16.html](./ejer16.html)** | Pipeline: Filtrar, calcular IVA, ordenar y mostrar. | Mixto (Pipeline) |
+Ejercicio 1: Filtrar números pares.
+
+    Archivo: ejer1.html
+
+Ejercicio 2: Filtrar productos por stock.
+
+    Archivo: ejer2.html
+
+Ejercicio 3: Eliminar elementos duplicados.
+
+    Archivo: ejer3.html
+
+Ejercicio 4: Calcular precios con IVA.
+
+    Archivo: ejer4.html
+
+Ejercicio 5: Extraer nombre y edad con destructuring.
+
+    Archivo: ejer5.html
+
+Ejercicio 6: Formatear nombres y apellidos.
+
+    Archivo: ejer6.html
+
+Ejercicio 7: Calcular suma total de precios.
+
+    Archivo: ejer7.html
+
+Ejercicio 8: Agrupar gastos por categoría.
+
+    Archivo: ejer8.html
+
+Ejercicio 9: Contar cantidad de palabras.
+
+    Archivo: ejer9.html
+
+Ejercicio 10: Buscar usuario por ID.
+
+    Archivo: ejer10.html
+
+Ejercicio 11: Buscar índice y actualizar elemento.
+
+    Archivo: ejer11.html
+
+Ejercicio 12: Ordenar números y frutas.
+
+    Archivo: ejer12.html
+
+Ejercicio 13: Ordenar empleados por salario.
+
+    Archivo: ejer13.html
+
+Ejercicio 14: Mostrar productos y total acumulado.
+
+    Archivo: ejer14.html
+
+Ejercicio 16: Pipeline completo (filtrar, calcular, ordenar y mostrar).
+
+    Archivo: ejer16.html
