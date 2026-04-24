@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=º, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <p>pulsa f12  para ver los productos disponibles.</p>
+
+    <script>
+        const productos = [
+            { nombre: "Manzana", precio: 1.2, stock: 50 },
+            { nombre: "Kiwi",    precio: 0.8, stock: 0  },
+            { nombre: "Mango",   precio: 2.5, stock: 12 },
+            { nombre: "Papaya",  precio: 3.0, stock: 0  },
+            { nombre: "Naranja", precio: 0.6, stock: 30 },
+        ];
+
+        // Filtramos: solo pasan los objetos cuya propiedad stock sea mayor a 0
+        const disponibles = productos.filter(producto => producto.stock > 0);
+
+        // Resultado en consola
+        console.table(disponibles); 
+    </script>
+</body>
+</body>
+</html>

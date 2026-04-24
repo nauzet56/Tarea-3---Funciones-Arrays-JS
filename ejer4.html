@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Consulta el cálculo de precios con IVA en la consola pulsando f12</p>
+
+    <script>
+        const precios = [10, 25.5, 8.99, 100, 49.95];
+
+        const conIVA = precios.map(precio => {
+            // 1. Calculamos el precio + 21% de IVA
+            const calculo = precio * 1.21;
+            // 2. Redondeamos a 2 decimales y convertimos de nuevo a número
+            return Number(calculo.toFixed(2));
+        });
+
+        console.log("Precios originales:", precios);
+        console.log("Precios con IVA (21%):", conIVA);
+    </script>
+</body>
+</html>

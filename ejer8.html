@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Pulsa f12 para ver los gastos agrupados por categoría.</p>
+
+    <script>
+        const gastos = [
+            { concepto: "Pizza",      categoria: "comida",   importe: 12 },
+            { concepto: "Bus",        categoria: "transporte", importe: 2.5 },
+            { concepto: "Sushi",      categoria: "comida",   importe: 18 },
+            { concepto: "Cine",       categoria: "ocio",     importe: 9  },
+            { concepto: "Taxi",       categoria: "transporte", importe: 8  },
+            { concepto: "Concierto",  categoria: "ocio",     importe: 35 },
+        ];
+
+        const porCategoria = gastos.reduce((acumulador, gasto) => {
+            // Extraemos la categoría e importe del gasto actual
+            const { categoria, importe } = gasto;
+
+            // Si la categoría aún no existe en nuestro objeto acumulador, la creamos en 0
+            if (!acumulador[categoria]) {
+                acumulador[categoria] = 0;
+            }
+
+            // Sumamos el importe a la categoría correspondiente
+            acumulador[categoria] += importe;
+
+            return acumulador;
+        }, {}); // El valor inicial es un objeto vacío {}
+
+        console.log("Gastos originales:", gastos);
+        console.log("Agrupado por categoría:", porCategoria);
+    </script>
+</body>
+</html>

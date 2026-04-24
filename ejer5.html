@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Mira la extracción de datos en la consola pulsando el f12</p>
+    <script>
+        const usuarios = [
+  { id: 1, nombre: "Ana",   edad: 23, ciudad: "Madrid"    },
+  { id: 2, nombre: "Luis",  edad: 31, ciudad: "Barcelona" },
+  { id: 3, nombre: "Marta", edad: 19, ciudad: "Sevilla"   },
+];
+// Usamos destructuring { nombre, edad } directamente en el argumento
+        // Importante: Usamos paréntesis ({...}) para que JS entienda que devolvemos un objeto
+        const resumen = usuarios.map(({ nombre, edad }) => ({ nombre, edad }));
+
+        console.log("Datos originales:", usuarios);
+        console.log("Objetos simplificados:", resumen);
+    </script>
+</body>
+</html>

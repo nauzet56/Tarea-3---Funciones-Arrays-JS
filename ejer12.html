@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Resolución del Ejercicio 12</h1>
+    <p>Revisa el orden de los arrays en la consola (F12).</p>
+
+    <script>
+        const edades = [31, 5, 18, 42, 7, 23];
+        const frutas = ["mango", "apple", "kiwi", "banana"];
+
+        // Orden numérico ascendente: (a, b) => a - b
+        // Usamos [...edades] para no modificar el array original
+        const edadesOrden = [...edades].sort((a, b) => a - b);
+
+        // Orden alfabético: el comportamiento por defecto de sort() ya es alfabético
+        const frutasOrden = [...frutas].sort();
+
+        console.log("Edades (de menor a mayor):", edadesOrden);
+        console.log("Frutas (orden alfabético):", frutasOrden);
+        
+        // Verificación de que los originales siguen intactos
+        console.log("Originales (sin cambios):", { edades, frutas });
+    </script>
+</body>
+</html>

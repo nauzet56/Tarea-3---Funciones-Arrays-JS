@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Abre la consola (F12) para ver el conteo de palabras.</p>
+
+    <script>
+        const palabras = [
+            "hola", "mundo", "hola", "js", "mundo",
+            "hola", "filter", "js", "hola"
+        ];
+
+        const conteo = palabras.reduce((acumulador, palabra) => {
+            // Si la palabra ya existe en el objeto, le sumamos 1
+            // Si no existe, la inicializamos en 1
+            acumulador[palabra] = (acumulador[palabra] || 0) + 1;
+            
+            return acumulador;
+        }, {});
+
+        console.log("Array original:", palabras);
+        console.log("Resultado del conteo:", conteo);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p>La suma total de los precios se muestra en la consola pulsando el f12</p>
+
+    <script>
+        const precios = [12.5, 8.99, 45.0, 3.25, 22.8];
+
+        // reduce recibe un acumulador (acc) y el valor actual (precio)
+        // El 0 al final es el valor inicial del acumulador
+        const total = precios.reduce((acc, precio) => {
+            return acc + precio;
+        }, 0);
+
+        // Mostramos el resultado con 2 decimales
+        console.log("Array de precios:", precios);
+        console.log("Total:", total.toFixed(2));
+    </script>
+</body>
+</html>

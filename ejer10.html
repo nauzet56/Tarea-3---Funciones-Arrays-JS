@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Busca el resultado del usuario encontrado en la consola </p>
+
+    <script>
+        const usuarios = [
+            { id: 1, nombre: "Ana",    rol: "admin" },
+            { id: 2, nombre: "Luis",   rol: "user"  },
+            { id: 3, nombre: "Marta",  rol: "user"  },
+            { id: 4, nombre: "Carlos", rol: "admin" },
+        ];
+
+        // find recorre el array y devuelve el PRIMER elemento que cumpla la condición
+        const encontrado = usuarios.find(usuario => usuario.id === 3);
+
+        // Resultado en consola
+        console.log("Usuario buscado (ID 3):", encontrado);
+
+        // Verificación extra por si no existiera
+        if (encontrado) {
+            console.log(`Se ha encontrado a: ${encontrado.nombre}`);
+        } else {
+            console.log("Usuario no encontrado.");
+        }
+    </script>
+</body>
+</html>

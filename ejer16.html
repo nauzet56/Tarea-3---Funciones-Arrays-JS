@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Resolución del Ejercicio 16</h1>
+    <p>Revisa el procesamiento de pedidos en la consola (F12).</p>
+
+    <script>
+        const pedidos = [
+            { id: "P01", importe: 45.0,  entregado: true  },
+            { id: "P02", importe: 120.0, entregado: false  },
+            { id: "P03", importe: 33.5,  entregado: true  },
+            { id: "P04", importe: 89.0,  entregado: true  },
+            { id: "P05", importe: 15.0,  entregado: false  },
+        ];
+
+        console.log("Procesando pedidos entregados (con IVA y ordenados):");
+
+        pedidos
+            // 1. Filtramos solo los pedidos que han sido entregados
+            .filter(pedido => pedido.entregado)
+            
+            // 2. Calculamos el importe con IVA creando un nuevo objeto (map)
+            .map(pedido => ({
+                ...pedido,
+                importeConIVA: Number((pedido.importe * 1.21).toFixed(2))
+            }))
+            
+            // 3. Ordenamos de mayor a menor por el nuevo importe calculado
+            .sort((a, b) => b.importeConIVA - a.importeConIVA)
+            
+            // 4. Mostramos cada uno por consola
+            .forEach(pedido => {
+                console.log(`${pedido.id} → ${pedido.importeConIVA} €`);
+            });
+    </script>
+</body>
+</html>bodybody

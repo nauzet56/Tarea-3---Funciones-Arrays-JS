@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p>Revisa el formato de los nombres en la consola pulsando el f12</p>
+
+    <script>
+        const nombres = [
+            "ana garcia",
+            "luis perez",
+            "marta lopez",
+            "carlos ruiz"
+        ];
+
+        const formateados = nombres.map(nombreCompleto => {
+            // 1. Dividimos el string en un array: ["nombre", "apellido"]
+            const partes = nombreCompleto.split(" ");
+            const nombre = partes[0];
+            const apellido = partes[1];
+
+            // 2. Formateamos: Apellido en MAYÚSCULAS y Nombre con la primera en Mayúscula
+            // Usamos slice(1) para obtener el resto del nombre tras la primera letra
+            const nombreFormateado = nombre.charAt(0).toUpperCase() + nombre.slice(1);
+            const apellidoFormateado = apellido.toUpperCase();
+
+            // 3. Retornamos el string combinado
+            return `${apellidoFormateado}, ${nombreFormateado}`;
+        });
+
+        console.log("Original:", nombres);
+        console.log("Formateados:", formateados);
+    </script>
+</body>
+</html>

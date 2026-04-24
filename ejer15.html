@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Ejercicio 15: Verificar permisos
+Cada usuario tiene un array de roles. Usa includes para verificar si puede acceder a una ruta protegida que requiere el rol "admin". Muestra un mensaje distinto según el resultado.
+ 
+
+const usuarios = [
+  { nombre: "Ana",    roles: ["admin", "editor"] },
+  { nombre: "Luis",   roles: ["user"]             },
+  { nombre: "Marta",  roles: ["editor", "user"]   },
+  { nombre: "Carlos", roles: ["admin"]             },
+];
+usuarios.forEach(usuario => {
+  const puedeAcceder = /* usa includes para comprobar rol "admin" */;
+  const mensaje = puedeAcceder
+    ? usuario.nombre + ": Acceso permitido"
+    : usuario.nombre + ": Acceso denegado";
+  console.log(mensaje);
+});
+</body>
+</html>

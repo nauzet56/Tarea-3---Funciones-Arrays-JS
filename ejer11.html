@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Resolución del Ejercicio 11</h1>
+    <p>Revisa la consola (F12) para ver el producto Kiwi actualizado.</p>
+
+    <script>
+        const productos = [
+            { nombre: "Manzana", precio: 1.2 },
+            { nombre: "Kiwi",    precio: 0.8 },
+            { nombre: "Mango",   precio: 2.5 },
+        ];
+
+        // findIndex nos devuelve la posición (0, 1, 2...) del elemento
+        const idx = productos.findIndex(p => p.nombre === "Kiwi");
+
+        // Verificamos que el índice existe (findIndex devuelve -1 si no encuentra nada)
+        if (idx !== -1) {
+            // Actualizamos el precio accediendo directamente al índice del array
+            productos[idx].precio = 1.5;
+            console.log(`Producto en índice ${idx} actualizado con éxito.`);
+        }
+
+        console.table(productos);
+    </script>
+</body>
+</html>

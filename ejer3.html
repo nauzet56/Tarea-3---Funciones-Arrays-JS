@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Mira los resultados filtrados pulsando f12.</p>
+
+    <script>
+        const tags = ["js", "css", "js", "html", "css", "js", "react"];
+
+        // La función filter nos da el elemento (tag) y su posición actual (index)
+        const unicos = tags.filter((tag, index) => {
+            // Comparamos si la posición actual es igual a la primera vez que aparece el tag
+            return tags.indexOf(tag) === index;
+        });
+
+        console.log("Array original:", tags);
+        console.log("Array sin duplicados:", unicos);
+    </script>
+</body>
+</html>

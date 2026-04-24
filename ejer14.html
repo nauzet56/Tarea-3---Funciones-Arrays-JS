@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Resolución del Ejercicio 14</h1>
+    <p>Revisa el ticket de compra en la consola (F12).</p>
+
+    <script>
+        const carrito = [
+            { nombre: "Teclado",  precio: 45.99 },
+            { nombre: "Ratón",    precio: 19.5  },
+            { nombre: "Monitor",  precio: 199.0 },
+            { nombre: "Webcam",   precio: 34.99 },
+        ];
+
+        let total = 0;
+
+        // forEach no devuelve nada, pero nos permite ejecutar acciones por cada elemento
+        carrito.forEach(producto => {
+            // 1. Mostrar cada producto formateado
+            console.log(`${producto.nombre.padEnd(10)}: ${producto.precio.toFixed(2)} €`);
+            
+            // 2. Acumular el total en la variable externa
+            total += producto.precio;
+        });
+
+        console.log("─────────────────");
+        console.log("Total:", total.toFixed(2) + " €");
+    </script> 
+</body>
+</html>
